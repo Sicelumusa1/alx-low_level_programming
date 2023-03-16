@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILE
+CFILE=c_file; gcc -S $CFILE -o c_file.o
