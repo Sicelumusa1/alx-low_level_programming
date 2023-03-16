@@ -3,7 +3,7 @@
 /**
  * main-Entry point for the program
  * this program prints the inputs on the terminal
- * it calls on the other functions to perform it functionality 
+ * it calls on the other functions to perform it functionality
  * Return:Always return 0 on success
  */
 
