@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * int add-combiling two numbers
+ * add- two numbers
+ * This function takes two integer arguments, returns their sum.
  * @a:first number taken by the function
  * @b:second number taken by the function
  * Return:Always the result of addint the two numbers
@@ -9,5 +10,7 @@
 
 int add(int a, int b)
 	{
-		return (a + b);
+		int sum = a + b;
+
+		return (sum);
 	}
