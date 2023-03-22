@@ -8,29 +8,11 @@
 
 void print_to_98(int n)
 	{
-		int i;
-
-		if (n <= 'b')
-		{
-		for (i = n; i <= 'b'; i++)
-		{
-			_putchar(i);
-		if (i != 'b') 
+		if (n == 0 && n <= 'b')
 			{
+				_putchar(n);
 				_putchar(',');
-			}
-		else
-		{
-			for (i = n; i >= 'b'; i--)
-			{
-				_putchar(i);
-			if (i != 'b')
-			{
-				_putchar(',');
-			}
-			}
-		}
-		}
+				_putchar(32);
+			}	
 		_putchar('\n');
-		}
 	}
