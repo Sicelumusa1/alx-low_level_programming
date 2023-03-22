@@ -10,21 +10,21 @@ void print_to_98(int n)
 	{
 		int i;
 
-		if (n <= 98)
+		if (n <= 'b')
 		{
-		for (i = n; i <= 98; i++)
+		for (i = n; i <= 'b'; i++)
 		{
 			_putchar(i);
-		if (i != 98) 
+		if (i != 'b') 
 			{
 				_putchar(',');
 			}
 		else
 		{
-			for (i = n; i >= 98; i--)
+			for (i = n; i >= 'b'; i--)
 			{
 				_putchar(i);
-			if (i != 98)
+			if (i != 'b')
 			{
 				_putchar(',');
 			}
