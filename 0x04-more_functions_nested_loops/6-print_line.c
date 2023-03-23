@@ -9,7 +9,7 @@
 void print_line(int n)
 {
 
-	while (n >= 1 && n <= 10)
+	while (n >= 1 && n <= 9)
 	{
 		_putchar(95);
 		n--;
