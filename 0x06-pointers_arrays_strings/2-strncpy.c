@@ -18,10 +18,9 @@ char *_strncpy(char *dest, char *src, int n)
 		if ((*result = *src) != 0)
 		{
 			src++;
-			result++;
 		}
+		result++;
 		n--;
 	}
 	return (dest);
 }
-
