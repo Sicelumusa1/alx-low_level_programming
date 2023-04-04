@@ -11,7 +11,7 @@
 
 char *_strchr(char *s, char c)
 {
-	char*pc = &c;
+	char *pc = &c;
 
 	for (; *s != (char)c; ++s)
 	{
