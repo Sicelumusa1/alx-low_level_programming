@@ -7,6 +7,20 @@
  */
 
 int _sqrt_recursion(int n)
-{
 
+	int x = 1, y;
+
+	if (n < 1)
+		return (-1);
+
+	y = (x + n / x) / 2;
+
+	if (y == x)
+	{
+		return (x);
+	}
+	else
+	
+		return (mysqrt_recursion(n, y));
+	
 }
