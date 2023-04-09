@@ -14,9 +14,10 @@ int main(int argc, char *argv[])
 	int num = atoi(argv[i]);
 
 	if (argc == 1)
-		printf("0\n");
+	printf("0\n");
 
 	if (num < 0)
+	return (1);
 
 	for (; i <= argc; i++)
 	{

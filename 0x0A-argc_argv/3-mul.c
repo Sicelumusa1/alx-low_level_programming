@@ -5,8 +5,8 @@
 /**
  * main-Entry point foor a program that multiplys two numbers
  * @argc:number of arguments passed on a command line
- * @argv: value of arguments passed on a command line
- * Return: the results if success, error if numbers entererd are
+ * @argv:value of arguments passed on a command line
+ * Return:the results if success, error if numbers entererd are
  * not two
  */
 
@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
 		results = op1 * op2;
                 printf("%d\n",results);
 		break;
+		
 		if (argc != 3)
 		{
 			printf("error\n");
 		}
-		return (1);
 	}
-	return (results);
+	return (1);
 }
