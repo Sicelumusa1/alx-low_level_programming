@@ -1,28 +1,33 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "stdlib.h"
 
 /**
  * main-Entry point for the program that adds positive numbers
  * @argc: number of arguments passed on command line
  * @argv: values of the arguments passed
- * Return: 1
+ * Return: 1 on failure and 0 on success
  */
 
 int main(int argc, char *argv[])
 {
-	int i = 1, result = 0;
-	int num = atoi(argv[i]);
+	int i = 1, num;
+	int result;
 
-	if (argc == 1)
-	printf("0\n");
-
-	if (num < 0)
-	return (1);
-
-	for (; i <= argc; i++)
+	if (argc < 2)
 	{
-		result += num;
-		printf("%d\n", result);
+		printf("0\n");
 	}
-	return (1);
+
+	for (; i < argc; i++)
+	{
+		num = atoi(argv[i]);
+		if (num <= 0)
+		{
+			printf("error\n");
+			return (1);
+		}
+			result += num;
+	}
+	printf("%d\n", result);
+	return (0);
 }

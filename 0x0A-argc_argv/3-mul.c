@@ -6,27 +6,28 @@
  * main-Entry point foor a program that multiplys two numbers
  * @argc:number of arguments passed on a command line
  * @argv:value of arguments passed on a command line
- * Return:the results if success, error if numbers entererd are
- * not two
+ * Return:0 on success, 1 on failure
  */
 
 int main(int argc, char *argv[])
 {
-	
-	int op1 = atoi(argv[1]);
-	int op2 = atoi(argv[2]);
-	int i, results = 0;
-	
-	for (i = 2; i <= 2; i++)
+
+	int num1, num2;
+	int i = 1, result = 0;
+
+	if (argc < 2)
 	{
-		results = op1 * op2;
-                printf("%d\n",results);
-		break;
-		
-		if (argc != 3)
-		{
-			printf("error\n");
-		}
+		printf("error\n");
+		return (1);
 	}
-	return (1);
+
+	for (; i <= argc; i++)
+	{
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+
+		result = num1 * num2;
+	}
+	printf("%d\n", result);
+	return (0);
 }
