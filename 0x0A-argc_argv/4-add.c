@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1, num = 0;
+	int i = 1, j = 0, num = 0;
 	int result = 0;
 		
 	if (argc < 2)
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	for (; i < argc; i++)
 	{
 		num = atoi(argv[i]);
-		if (num < 0)
+		if (argv[i][j] < '0' || argv[i][j] > '9')
 		{
 			printf("error\n");
 			return (1);
