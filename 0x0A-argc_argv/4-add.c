@@ -10,12 +10,19 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1, num;
-	int result;
+	int i = 1, num = 0;
+	int result = 0;
+	
+	/*if (*argv[1] < '0' || *argv[i] > '9')
+	{
+		printf("error\n");
+		return (1);
+	}*/	
 
 	if (argc < 2)
 	{
 		printf("0\n");
+		return (1);
 	}
 
 	for (; i < argc; i++)

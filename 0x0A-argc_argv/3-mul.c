@@ -15,6 +15,12 @@ int main(int argc, char *argv[])
 	int num1, num2;
 	int i = 1, result = 0;
 
+	if (argc != 3)
+	{
+		printf("error\n");
+		return (1);
+	}
+
 	if (argc <= 2)
 	{
 		printf("error\n");
