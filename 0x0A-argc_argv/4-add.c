@@ -3,9 +3,9 @@
 
 /**
  * main-Entry point for the program that adds positive numbers
- * @argc: number of arguments passed on command line
- * @argv: values of the arguments passed
- * Return: 1 on failure and 0 on success
+ * @argc:number of arguments passed on command line
+ * @argv:values of the arguments passed
+ * Return:1 on failure and 0 on success
  */
 
 int main(int argc, char *argv[])
