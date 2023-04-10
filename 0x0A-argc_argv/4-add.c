@@ -5,7 +5,7 @@
  * main-Entry point for the program that adds positive numbers
  * @argc:number of arguments passed on command line
  * @argv:values of the arguments passed
- * Return:0 on success, 1 on failure
+ * Return:Always 0 on success, 1 on failure
  */
 
 int main(int argc, char *argv[])
@@ -21,13 +21,15 @@ int main(int argc, char *argv[])
 
 	for (; i < argc; i++)
 	{
-		num = atoi(argv[i]);
-
-		if (argv[i][j] < '0' || argv[i][j] > '9')
+		for (; argv[j] != 0; j++)
 		{
-			printf("error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("error\n");
+				return (1);
+			}
 		}
+		num = atoi(argv[i]);
 		result += num;
 	}
 	printf("%d\n", result);
