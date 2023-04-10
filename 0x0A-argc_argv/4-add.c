@@ -2,7 +2,7 @@
 #include "stdlib.h"
 
 /**
- * main-Entry point for the program that adds positive numbers
+ * main- Entry point for the program that adds positive numbers
  * @argc:number of arguments passed on command line
  * @argv:values of the arguments passed
  * Return:Always 0 on success, 1 on failure
@@ -10,7 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1, j = 0, num = 0;
+	int i = 1, j = 0;
+	int num = 0;
 	int result = 0;
 
 	if (argc < 2)
