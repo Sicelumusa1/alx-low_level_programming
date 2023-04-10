@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * is_prime_number-function that returns 1 if the
- * is_prime- checks whether a number is prime or not
- * input integer is a prime number, otherwise return 0
+ * is_prime_number - function that returns 1 if the
+ * is_prime - checks whether a number is prime or not
  * @n: number to be tested if its prime or not
  * Return: 1 if a number is prime and 0 if its not
  */

@@ -11,5 +11,6 @@ void _print_rev_recursion(char *s);
 void _puts_recursion(char *s);
 int mysqrt_recursion(int n, int x);
 int is_prime(int n, int i);
+int is_palindrome(char *s);
 
 #endif
