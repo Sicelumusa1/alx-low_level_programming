@@ -21,14 +21,13 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (argc <= 2)
-	{
-		printf("error\n");
-		return (1);
-	}
-
 	for (; i <= argc; i++)
 	{
+		if (argc <= 2)
+		{
+			printf("error\n");
+			return (1);
+		}
 		num1 = atoi(argv[1]);
 		num2 = atoi(argv[2]);
 

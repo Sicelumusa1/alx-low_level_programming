@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i = 1, j = 0, num = 0;
 	int result = 0;
-		
+
 	if (argc < 2)
 	{
 		printf("0\n");
@@ -22,12 +22,13 @@ int main(int argc, char *argv[])
 	for (; i < argc; i++)
 	{
 		num = atoi(argv[i]);
+
 		if (argv[i][j] < '0' || argv[i][j] > '9')
 		{
 			printf("error\n");
 			return (1);
 		}
-			result += num;
+		result += num;
 	}
 	printf("%d\n", result);
 	return (0);
