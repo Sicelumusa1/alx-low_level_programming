@@ -28,22 +28,24 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-		
-	p = (char*)malloc(size_s1 + size_s2 + 1);
+
+	p = (char *)malloc(size_s1 + size_s2 + 1);
 
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	
+
 	while (*s1 != '\0')
 	{
 		s1++;
 	}
 
-	while ((*s1++ = *s2++) != '\0')
+	while ((*s1 = *s2) != '\0')
 	{
-
+		s1++;
+		s2++;
 	}
 	return (p);
+
 }
