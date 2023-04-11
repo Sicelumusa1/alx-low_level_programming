@@ -17,13 +17,17 @@ char *_strdup(char *str)
 	char *p_to_iterate;
 	int str_size;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
 	str_size = strlen(str);
 
 	pdupl = (char *)malloc(sizeof(char) * str_size + 1);
 
 	if (pdupl == NULL)
 	{
-		free(pdupl);
 		return (NULL);
 	}
 
