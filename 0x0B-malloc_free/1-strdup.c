@@ -23,13 +23,13 @@ char *_strdup(char *str)
 
 	if (pdupl == NULL)
 	{
-		return (NULL);
 		free(pdupl);
+		return (NULL);
 	}
 
 	p_to_iterate = pdupl;
 
-	while (*str != '\0')
+	while (*str)
 	{
 		*p_to_iterate = *str;
 		p_to_iterate++;
