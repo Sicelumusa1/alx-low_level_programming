@@ -5,7 +5,7 @@
  * main - Entry point for the program that adds positive numbers
  * @argc: number of arguments passed on command line
  * @argv: values of the arguments passed
- * Return:0 on success, 1 on failure
+ * Return: 0 on success, 1 on failure
  */
 
 int main(int argc, char *argv[])
