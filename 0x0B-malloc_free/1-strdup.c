@@ -24,6 +24,7 @@ char *_strdup(char *str)
 	if (pdupl == NULL)
 	{
 		return (NULL);
+		free(pdupl);
 	}
 
 	p_to_iterate = pdupl;
@@ -35,7 +36,6 @@ char *_strdup(char *str)
 		str++;
 	}
 	*p_to_iterate = '\0';
-
 	return (pdupl);
 }
 
