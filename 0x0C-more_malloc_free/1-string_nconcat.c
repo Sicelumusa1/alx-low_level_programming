@@ -16,14 +16,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i = 0, j = 0;
 	char *p;
 
-	p = malloc(strlen(s1) + strlen(s2) + 1);
+	if (n >= strlen(s2))
+	{
+		p = malloc(strlen(s1) + strlen(s2) + 1);
+	}
+	else
+	{
+		p = malloc(sizeof(int) * n + strlen(s1) + 1);
+	}
 
 	if (p == NULL)
 	{
 		return (NULL);
 	}
 
-	if (s1 == NULL) 
+	if (s1 == NULL)
 	{
 		s1 = "";
 	}
