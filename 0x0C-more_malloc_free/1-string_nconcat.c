@@ -16,19 +16,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i = 0, j = 0;
 	char *p;
 
-	if (n >= strlen(s2))
-	{
-		p = malloc(strlen(s1) + strlen(s2) + 1);
-	}
-	else
-	{
-		p = malloc(sizeof(int) * n + strlen(s1) + 1);
-	}
+	p = malloc(strlen(s1) + strlen(s2) + 1);
 
 	if (p == NULL)
 	{
 		return (NULL);
 	}
+
+	if (n >= strlen(s2))
+	{
+		n = strlen(s2);
+	}
+
+	p[strlen(s1) + n] = '\0';
 
 	if (n != '\0')
 	{
