@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
 		else if (coin >= 10)
 			coin -= 10;
 		else if (coin >= 5)
+			coin -= 5;
+		else if (coin >= 2)
 			coin -= 2;
 		else
 			coin -= 1;
