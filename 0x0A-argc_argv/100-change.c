@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int coin;
 	int change;
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -43,6 +43,4 @@ int main(int argc, char *argv[])
 	}
 	printf("%d\n", change);
 	return (0);
-
-
 }
