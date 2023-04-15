@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - Entry point for the program that the 
+ * main - Entry point for the program that the
  * minimum number of coins to make change
  * @argc: number of arguments passed on a command line
  * @argv: values of the arguments
