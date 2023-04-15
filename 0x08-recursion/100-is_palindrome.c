@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * is_palindrome-function that determines if 
+ * is_palindrome-function that determines if
  * a string is a palindrome not
  * palindrome_check- checks if a string is palindrome
  * @s: pointer to the string to be tested
@@ -10,7 +10,7 @@
  */
 
 int is_palindrome(char *s)
-{	
+{
 	int i = 0, len, result;
 
 	len = strlen(s);
@@ -20,12 +20,12 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	if (s[i] == s[len-i-1])
+	if (s[i] == s[len - i - 1])
 	{
 		return (1);
 	}
-	
-	if (s[0] != s[len -1])
+
+	if (s[0] != s[len - 1])
 	{
 		return (0);
 	}
