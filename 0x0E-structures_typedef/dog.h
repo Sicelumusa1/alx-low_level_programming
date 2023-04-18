@@ -1,5 +1,5 @@
-#ifndef STRUC_DOG_H
-#define STRUC_DOG_H
+#ifndef STRUCT_DOG_H
+#define STRUCT_DOG_H
 
 /**
  *  struct dog - structure that contains variables of different data types
@@ -15,4 +15,4 @@ struct dog
 	float age;
 };
 
-#endif /* STRUC_DOG_H */
+#endif /* STRUCT_DOG_H */
