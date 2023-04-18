@@ -20,6 +20,11 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 		len_name++;
 	}
 
+	(*d).name = malloc(len_name + 1);
+	if ((*d).name == NULL)
+		exit(98);
+	(*d).name = name;
+
 	while (*owner != '\0')
 	{
 		owner++;
@@ -27,22 +32,9 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 
 	(*d).name = malloc(len_name + 1);
-
-	while (*name != '\0')
-	{
-		*((*d).name) = *name;
-		(*d).name++;
-		name++;
-	}
-
-	(*d).owner = malloc(len_owner + 1);
-
-	while (*owner != '\0')
-	{
-		*((*d).owner) = *owner;
-		(*d).owner++;
-		owner++;
-	}
+	if ((*d).owner == NULL)
+		exit(98);
+	(*d).owner = owner;
 
 	(*d).age = age;
 }
