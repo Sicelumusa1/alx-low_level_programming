@@ -27,8 +27,6 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 
 	(*d).name = malloc(len_name + 1);
-	if ((*d).name == NULL)
-		return (NULL);
 
 	while (*name != '\0')
 	{
@@ -38,8 +36,6 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 
 	(*d).owner = malloc(len_owner + 1);
-	if (((*d).owner) == NULL)
-		return (NULL);
 
 	while (*owner != '\0')
 	{
