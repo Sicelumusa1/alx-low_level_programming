@@ -1,5 +1,5 @@
-#ifndef CALC_H
-#define CALC_H
+#ifndef _3_CALC_H
+#define _3_CALC_H
 
 /**
  * struct op - Struct op
@@ -19,4 +19,4 @@ int op_mul(int a, int b);
 int op_sub(int a, int b);
 int op_add(int a, int b);
 
-#endif /* CALC_H */
+#endif /* _3_CALC_H */
