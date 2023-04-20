@@ -20,52 +20,44 @@ void print_all(const char *const format, ...)
 		exit(98);
 
 	va_start(lst, format);
-	ptr = format;
 
-	while (*ptr != '\0')
-	{
-		switch (*ptr)
+		while (*ptr != '\0')
 		{
-			case 'i':
-			i = va_arg(lst, int);
-			printf("%d", i);
-			printf(", ");
-			break;
-
-			case 'c':
-			c = va_arg(lst, int);
-			printf("%c", c);
-			printf(", ");
-			break;
-
-			case 'f':
-			f = va_arg(lst, double);
-			printf("%f", f);
-			printf(", ");
-			break;
-
-			case 's':
-			s = va_arg(lst, char *);
-			if (s == NULL)
+			switch (*ptr)
 			{
-				printf("(nil)");
-			}
-			printf("%s", s);
-			break;
+				case 'i':
+				i = va_arg(lst, int);
+				printf("%d", i);
+				break;
 
-			default:
+				case 'c':
+				c = va_arg(lst, int);
+				printf("%c", c);
+				break;
 
-			break;
+				case 'f':
+				f = va_arg(lst, double);
+				printf("%f", f);
+				break;
+
+				case 's':
+				s = va_arg(lst, char *);
+				printf("%s", s);
+				break;
+
+				default:
+
+				break;
 			}
-			/*if (*(ptr + 1) != '\0' && (*ptr == 'i' ||
+			if (*(ptr + 1) != '\0' && (*ptr == 'i' ||
 						*ptr == 'c' ||
 						*ptr == 'f' ||
 						*ptr == 's'))
 			{
 				printf(", ");
-			}*/
+			}
 			ptr++;
-	}
+		}
 
 	printf("\n");
 	va_end(lst);
