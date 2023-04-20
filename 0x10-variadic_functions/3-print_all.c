@@ -15,9 +15,6 @@ void print_all(const char *const format, ...)
 	char *s;
 	char c;
 	float f;
-	
-	if (format == NULL)
-		return;
 
 	va_start(lst, format);
 	while ((ptr = format))
