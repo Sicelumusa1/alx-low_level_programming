@@ -15,10 +15,10 @@ void print_all(const char *const format, ...)
 	char *s;
 	char c;
 	float f;
-
-	if (format == NULL)
+/**
+*	if (format == NULL)
 		exit(98);
-
+*/
 	va_start(lst, format);
 	ptr = format;
 
@@ -54,13 +54,13 @@ void print_all(const char *const format, ...)
 
 			break;
 			}
-			/*if (*(ptr + 1) != '\0' && (*ptr == 'i' ||
+			if (*(ptr + 1) != '\0' && (*ptr == 'i' ||
 						*ptr == 'c' ||
 						*ptr == 'f' ||
 						*ptr == 's'))
 			{
 				printf(", ");
-			}*/
+			}
 			ptr++;
 	}
 
