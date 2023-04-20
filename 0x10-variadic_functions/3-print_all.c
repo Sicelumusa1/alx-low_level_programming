@@ -28,7 +28,7 @@ void print_all(const char *const format, ...)
 		{
 			case 'i':
 			i = va_arg(lst, int);
-			printf("%d", i);
+			printf(", %d", i);
 			break;
 
 			case 'c':
@@ -38,25 +38,29 @@ void print_all(const char *const format, ...)
 
 			case 'f':
 			f = va_arg(lst, double);
-			printf("%f", f);
+			printf(", %f", f);
 			break;
 
 			case 's':
 			s = va_arg(lst, char *);
-			printf("%s", s);
+			if (s == NULL)
+			{
+				printf("(nil)");
+			}
+			printf(", %s", s);
 			break;
 
 			default:
 
 			break;
 			}
-			if (*(ptr + 1) != '\0' && (*ptr == 'i' ||
+			/*if (*(ptr + 1) != '\0' && (*ptr == 'i' ||
 						*ptr == 'c' ||
 						*ptr == 'f' ||
 						*ptr == 's'))
 			{
 				printf(", ");
-			}
+			}*/
 			ptr++;
 	}
 
