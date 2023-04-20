@@ -15,10 +15,10 @@ void print_all(const char *const format, ...)
 	char *s;
 	char c;
 	float f;
-/**
-*	if (format == NULL)
+
+	if (format == NULL)
 		exit(98);
-*/
+
 	va_start(lst, format);
 	ptr = format;
 
@@ -28,7 +28,7 @@ void print_all(const char *const format, ...)
 		{
 			case 'i':
 			i = va_arg(lst, int);
-			printf(", %d", i);
+			printf("%d", i);
 			break;
 
 			case 'c':
@@ -38,16 +38,12 @@ void print_all(const char *const format, ...)
 
 			case 'f':
 			f = va_arg(lst, double);
-			printf(", %f", f);
+			printf("%f", f);
 			break;
 
 			case 's':
 			s = va_arg(lst, char *);
-			if (s == NULL)
-			{
-				printf("(nil)");
-			}
-			printf(", %s", s);
+			printf("%s", s);
 			break;
 
 			default:
