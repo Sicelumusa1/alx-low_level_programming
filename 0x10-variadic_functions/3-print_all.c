@@ -21,7 +21,7 @@ void print_all(const char *const format, ...)
 
 	va_start(lst, format);
 	ptr = format;
-	
+
 	while (*ptr != '\0')
 	{
 		switch (*ptr)
