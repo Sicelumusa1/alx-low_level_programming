@@ -16,7 +16,7 @@ void print_name(char *name, void (*f)(char *))
 		i++;
 	}
 
-	if (f == NULL || name == NULL)
+	if (f == NULL)
 		return;
 
 	f(name);
