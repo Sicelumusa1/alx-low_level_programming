@@ -1,4 +1,6 @@
 #include "function_pointers.h"
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * get _op_func - function that selects the correct 
@@ -24,11 +26,6 @@ int (*get_op_func(char *s))(int, int)
 	{
 		return (ops[i].f);
 		i++;
-	}
-
-	if (s != "+" || s != "-" || s != "*" || s != "/" || s != %)
-	{
-		return (NULL);
 	}
 
 	return (get_op_func);
