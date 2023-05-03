@@ -8,6 +8,7 @@
 
 int pop_listint(listint_t **head)
 {
+	int data;
 	listint_t *node_to_delete;
 
 	if (head == NULL || *head == NULL)
@@ -16,10 +17,11 @@ int pop_listint(listint_t **head)
 	}
 
 	node_to_delete = *head;
-	*head = (*head)->next;
+	*head = node_to_delete->next;
+	data = node_to_delete->n
 	free(node_to_delete);
 
-	return ((*head)->n);
+	return (data);
 
 }
 
