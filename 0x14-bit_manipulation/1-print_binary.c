@@ -7,31 +7,25 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int power_of_2 = 1;
+	unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	int leading_zero = 1;
 
-	if (n == 0)
+	while (mask)
 	{
-		_putchar('0');
-		return;
-	}
-
-	while (power_of_2 <= n / 2)
-	{
-		power_of_2 *= 2;
-	}
-
-	while (power_of_2 > 0)
-	{
-		if (n >= power_of_2)
+		if (n & mask)
 		{
+			leading_zero = 0;
 			_putchar('1');
-			n -= power_of_2;
 		}
-		else
+		else if (!leading_zero)
 		{
 			_putchar('0');
 		}
-		power_of_2 /= 2;
+		mask >>= 1;
+	}
 
+	if (leading_zero)
+	{
+		_putchar('0');
 	}
 }
