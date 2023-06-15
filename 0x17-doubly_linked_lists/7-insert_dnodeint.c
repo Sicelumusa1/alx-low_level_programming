@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts a node at  a given index in 
+ * insert_dnodeint_at_index - inserts a node at  a given index in
  * a doubly linked list
  * @h: pointer to the pointer with address of the first node
  * @idx: position before which a node must be inserted
@@ -30,7 +30,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		temp2->prev = NULL;
 		temp2->next = temp;
-		if(temp != NULL)
+		if (temp != NULL)
 		{
 			temp->prev = temp2;
 		}
@@ -52,8 +52,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	temp2->prev = temp;
 	temp2->next = temp->next;
-	
-	if(temp->next != NULL)
+
+	if (temp->next != NULL)
 	{
 		temp->next->prev = temp2;
 	}
