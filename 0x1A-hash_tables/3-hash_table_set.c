@@ -5,7 +5,7 @@
  * @ht: hash table you want to add of update the key/value to
  * @key: key
  * @value: value associated with the key
- * Returns: 1 if succeeded, 0 otherwise
+ * Return: 1 if succeeded, 0 otherwise
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -18,10 +18,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-
 	index = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[index];
-
 	/* check if key already exists in the hash table*/
 	while (current != NULL)
 	{
@@ -33,14 +31,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current = current->next;
 	}
-
 	/*make new node*/
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 	{
 		return (0);
 	}
-
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	if (new_node->key == NULL || new_node->value == NULL)
@@ -50,10 +46,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new_node);
 		return (0);
 	}
-
 	/* add new node at the beginning*/
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-
 	return (1);
 }
