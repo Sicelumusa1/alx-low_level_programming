@@ -22,14 +22,19 @@ hash_table_t *hash_table_create(unsigned long int size)
 	H_table->array = malloc(sizeof(hash_node_t *) * size);
 	if (H_table->array == NULL)
 	{
+		free(H_table);
 		return (NULL);
 	}
 
-	/*Set each entry to null*/
+	/*initialize each entry to null*/
 	for (i = 0; i < size; i++)
 	{
 		H_table->array[i] = NULL;
 	}
+
+	/*set the size*/
+
+	H_table->size = size;
 
 	return (H_table);
 }
