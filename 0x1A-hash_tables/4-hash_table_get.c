@@ -12,6 +12,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned int table_slot;
 	hash_node_t *entry;
 
+	if (ht == NULL)
+	{
+		return (NULL);
+	}
+
 	table_slot = key_index((unsigned char *)key, ht->size);
 
 	/*try find a valid table slot*/
