@@ -1,4 +1,4 @@
-#!/usrs/bin/python3
+#!/usr/bin/python3
 """Defines a function that returns the perimeter of the island described in grid
 """
 
