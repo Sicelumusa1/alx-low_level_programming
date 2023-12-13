@@ -1,7 +1,4 @@
 #include "search_algos.h"
-#include <stdio.h>
-#include <stddef.h>
-
 
 /**
  * linear_search - Searches for a given from an array of intergers
